@@ -1,0 +1,339 @@
+body {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.header {
+    height:60px;
+    background-color:#262626;
+    display:flex;
+}
+
+a {
+    text-decoration: none;
+    color:#F1FFFF;
+}
+
+.market {
+    margin-left: 50px;
+    width:43%;
+    display: flex;
+    align-items: center;
+}
+
+.buy {
+    width:45%;
+    border-right: 1px dotted gray;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 60px;
+}
+
+.buy a {
+    padding: 4px 12px;
+    border-radius: 5px;
+    background-color: #7AA93C;
+    opacity:1;
+}
+
+.buy a:hover {
+    opacity:0.7;
+    transition: 0.5s;
+}
+
+
+
+.remove {
+    text-align: center;
+    width:12%;
+    line-height: 60px;
+    font-size:12px;
+    
+}
+
+.remove a {
+    color:gray;
+}
+
+.remove a:hover {
+    color:white;
+    transition:0.5s;
+}
+
+i.fa-bars {
+    font-size: 1rem;
+    color:white;
+    margin: 0 8px;
+}
+
+/* Container */
+.container {
+    box-sizing: border-box;
+    position: relative;
+    width:100%;
+    background-image: url(./img/backnew.jpg);
+    height:597px;
+}
+
+div.icon-plus {
+    height:100px;
+    display:inline-block;
+    width:auto;
+    position: relative;
+    top: 70px;
+}
+
+.fa-plus {
+    display:inline-block;
+    width:auto;
+    background-color:#C2511B;
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    padding: 3px 0 3px 15px;
+    color:white;
+}
+
+.plus-text {
+    display:inline-block;
+    width:0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition:1s;
+    margin: 0 10px;
+    color:white;
+}
+
+.fa-plus:hover .plus-text {
+    width:200px; 
+}
+
+div.icon-plus:hover i.fa-plus{
+    border-radius:0 10px 10px 0;
+}
+
+/* Phần content */
+
+.content {
+    width:100%;
+    box-sizing: border-box;
+    margin-top:20px;
+    height:auto;
+    display:flex;
+}
+
+.left-icon {
+    height: 450px;
+    position: relative;
+    width:450px;
+    padding-left:15px;
+}
+
+.big-circle {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border:1px solid #AC4819;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.blog{
+    position: absolute;
+    top: 14%;
+    left: 23%;
+}
+
+.External-link {
+    right:25%;
+    position: absolute;
+    top: 14%;
+}
+
+.External-link p {
+    text-align: center;
+}
+
+.about {
+    position: absolute;
+    top: 46%;
+    left: 11%;
+}
+
+.contacts {
+    position: absolute;
+    top: 46%;
+    right: 14%;
+}
+
+.skills {
+    position: absolute;
+    bottom: 15%;
+    left: 23%;
+}
+
+.portfolio {
+    position: absolute;
+    bottom: 15%;
+    right: 25%;
+}
+
+i.material-icons {
+    font-size: 40px;
+    color:white;
+}
+
+i.fa-sim-card {
+    font-size: 32px;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin:0;
+    padding:0;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition:1s;
+    display:inline-block;
+    opacity:0.4;
+}
+
+li p {
+    display:none;  
+}
+
+li:hover {
+    opacity:1;
+}
+
+li:hover i {
+    text-shadow: 1px 1px 20px white; 
+}
+
+li:hover p {
+    text-shadow: 1px 1px 20px white; 
+    display:block;
+    color:white;
+}
+
+.small-circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-image: url(./img/sne.png);
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    margin-left: 15px;
+}
+
+/* Phần right-intro */
+
+.right-intro {
+    width:calc(100% - 450px);
+    height:auto;
+    box-sizing: border-box;
+    padding: 0 30px 0 360px;
+}
+
+h2 {
+    font-size: 60px !important;
+    color:white !important;
+    text-shadow: 1px 1px 40px white; 
+}
+
+.right-intro p {
+    margin: 20px 0;
+}
+
+p.text-intro {
+    color:#817F7E;
+}
+
+h5 {
+    position: relative;
+    font-size: 20px !important;
+    color:red !important;
+    margin: 30px 0 !important;
+}
+
+h5::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background-color: red;
+    top: 43%;
+    left: 37%;
+    z-index:1;
+}
+
+h5::after {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 2px;
+    background-color: black;
+    top: 45%;
+    left: 37%;
+}
+
+h5.web::before  {
+    animation: my-web 2s ease-out infinite;
+    animation-play-state:running;
+}
+
+@keyframes my-web {
+    from {width: 0;}
+    to {width: 250px;}
+}
+
+h5.ui::before {
+    animation: my-ui 2s ease-out infinite;
+    animation-play-state:running;
+}
+
+@keyframes my-ui {
+    from {width: 0;}
+    to {width: 220px;}
+}
+
+h5.html::before {
+    animation: my-html 2s ease-out infinite;
+    animation-play-state:running;
+}
+
+@keyframes my-html {
+    from {width: 0;}
+    to {width: 280px;}
+}
+
+h5.jqui::before {
+    animation: my-jqui 2s ease-out infinite;
+    animation-play-state: running;
+}
+
+@keyframes my-jqui {
+    from {width:0;}
+    to {width:180px;}
+}
+
+
+
+
+
