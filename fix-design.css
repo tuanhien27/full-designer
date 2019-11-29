@@ -213,7 +213,7 @@ li {
 }
 
 li p {
-    /* display:none;   */
+    display:none;  
     color: black;
     position: absolute;
 }
