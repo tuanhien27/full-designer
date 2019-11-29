@@ -182,7 +182,7 @@ div.icon-plus:hover i.fa-plus{
 
 i.material-icons {
     font-size: 40px;
-    color:white;
+    color:red;
 }
 
 i.fa-sim-card {
@@ -208,10 +208,20 @@ li {
     transition:1s;
     display:inline-block;
     opacity:0.4;
+    position: relative;
+    text-align: center;
 }
 
 li p {
-    display:none;  
+    /* display:none;   */
+    color: black;
+    position: absolute;
+}
+
+li:hover p {
+    text-shadow: 1px 1px 20px white; 
+    display:block;
+    width: 100%;
 }
 
 li:hover {
@@ -222,11 +232,10 @@ li:hover i {
     text-shadow: 1px 1px 20px white; 
 }
 
-li:hover p {
-    text-shadow: 1px 1px 20px white; 
-    display:block;
-    color:white;
+.contacts li {
+    text-align: center;
 }
+
 
 .small-circle {
     width: 170px;
@@ -273,14 +282,40 @@ h5 {
     margin: 30px 0 !important;
 }
 
-h5::before {
+/* code change */
+.line-parent {
+    width: 300px;
+    height: 4px;
+    background-color: silver;
+}
+
+.line-child {
+    width: 0;
+    height: 4px;
+    background-color: red;
+    transition: all 4s;
+    animation: test 2s ease ;
+}
+
+/* e dùng animation như thế này nhé, ko dùng after và before trong trường hợp này
+    xem lại các thẻ trong html, với mỗi thèn  width nó khác nhau thì mình dùng
+    animation cho từng thèn
+*/
+
+@keyframes test {
+    0% {width: 0;}
+    100% {width: 70%}
+}
+/* h5::before {
     position: absolute;
     content: "";
+    width: 100px;
     height: 5px;
     background-color: red;
     top: 43%;
     left: 37%;
     z-index:1;
+    transition: 1s;
 }
 
 h5::after {
@@ -291,12 +326,9 @@ h5::after {
     background-color: black;
     top: 45%;
     left: 37%;
-}
+    
+} */
 
-h5.web::before  {
-    animation: my-web 2s ease-out infinite;
-    animation-play-state:running;
-}
 
 @keyframes my-web {
     from {width: 0;}
