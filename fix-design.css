@@ -290,7 +290,7 @@ h5 {
 }
 
 .line-child {
-    width: 0;
+    width: 70%;
     height: 4px;
     background-color: red;
     transition: all 4s;
